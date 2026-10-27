@@ -45,6 +45,7 @@ jobs:
       - name: Save raw KSNDMC pages and push them to the inspect-output branch
         run: |
           python backend/inspect/save_pages.py $(cat backend/inspect/pages.txt)
+          python backend/inspect/inspect_ksndmc_api.py
           cd inspect-output
           git init -q -b inspect-output && git add -A
           git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "Raw pages"

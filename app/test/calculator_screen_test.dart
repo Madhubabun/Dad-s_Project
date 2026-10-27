@@ -26,6 +26,9 @@ void main() {
     tester,
   ) async {
     await pumpApp(tester);
+    // The app opens on the Today tab; switch to the credit calculator.
+    await tester.tap(find.text('అప్పు లెక్క'));
+    await tester.pumpAndSettle();
     expect(find.text('ఎరువుల అప్పు లెక్క'), findsOneWidget);
 
     await tester.tap(find.text('కొత్త కొనుగోలు చేర్చు'));
@@ -45,7 +48,7 @@ void main() {
 
   testWidgets('settings switches to English', (tester) async {
     await pumpApp(tester);
-    await tester.tap(find.byIcon(Icons.settings));
+    await tester.tap(find.byIcon(Icons.settings).first);
     await tester.pumpAndSettle();
     await tester.tap(find.text('English'));
     await tester.pumpAndSettle();

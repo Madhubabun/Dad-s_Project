@@ -44,7 +44,7 @@ class DataRepository {
       final response = await http
           .get(
             Uri.parse(dataUrl),
-            headers: {if (etag != null) 'If-None-Match': etag},
+            headers: {'If-None-Match': ?etag},
           )
           .timeout(const Duration(seconds: 20));
       if (response.statusCode == 304) return SyncResult.notChanged;

@@ -56,16 +56,23 @@ def describe(r):
     return links
 
 
+# Pages found on the home page that may hold reservoir data (run 2).
+PAGES = [
+    "https://ksndmc.org/en/Reports",
+    "https://ksndmc.org/en/Activities/Hydrology",
+    "https://ksndmc.org/en/WebDashboard",
+    "https://ksndmc.org/en/QueryInterface",
+]
+
 seen = set()
-for start in START_PAGES:
-    r = fetch(start)
+for page in PAGES:
+    r = fetch(page)
     if r is None or not r.ok:
         continue
-    for _, href in describe(r)[:15]:
-        if href in seen:
+    for _, href in describe(r)[:10]:
+        if href in seen or not href.startswith("http"):
             continue
         seen.add(href)
         sub = fetch(href)
         if sub is not None and sub.ok and "html" in (sub.headers.get("content-type") or ""):
             describe(sub)
-    break

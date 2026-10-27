@@ -36,20 +36,16 @@ def post(path, body, label):
         print(label, "FAILED", e)
 
 
-for shape, body in {
-    "top": {"yr": 2026, "requiresCounts": False},
-    "params": {"params": {"yr": 2026}, "requiresCounts": False},
-}.items():
-    post("/en/Root/YearlyWeek", body, f"weeks-{shape}")
+# Run 1 showed: parameters go at the top level of the body, and the
+# reservoir query returns nothing without a week.
+r = post("/en/Root/YearlyWeek", {"yr": 2026, "requiresCounts": False}, "weeks-2026")
+weeks = [w["Value"] for w in (r.json() if r is not None and r.ok else [])]
+print("weeks:", weeks)
 
 for name in ["Narayanapura", "Narayanpura", "Naranapura", "Narayapura", "Alamatti"]:
-    for shape in ["top", "params"]:
-        args = {"CmbR": name, "CmbW": None, "CmbY": 2026}
-        body = {"requiresCounts": True, "skip": 0, "take": 50}
-        if shape == "top":
-            body.update(args)
-        else:
-            body["params"] = args
-        post("/en/QueryInterface/GVReservoir", body, f"res-{name}-{shape}")
-
+    for week in list(reversed(weeks))[:3]:
+        for wk in (week, int(week)):
+            body = {"requiresCounts": True, "skip": 0, "take": 50,
+                    "CmbR": name, "CmbW": wk, "CmbY": 2026}
+            post("/en/QueryInterface/GVReservoir", body, f"res-{name}-week{week}-{type(wk).__name__}")
 (OUT / "ksndmc_api.json").write_text(json.dumps(log, indent=1, ensure_ascii=False))

@@ -1,7 +1,9 @@
 {
   "@@locale": "en",
   "appTitle": "Raithe Raju",
-  "@appTitle": {"description": "App name. Means 'the farmer is king'."},
+  "@appTitle": {
+    "description": "App name. Means 'the farmer is king'."
+  },
   "calculatorTitle": "Fertilizer credit",
   "settingsTitle": "Settings",
   "interestRate": "Interest rate",
@@ -18,7 +20,13 @@
   "removed": "Removed",
   "undo": "Undo",
   "days": "{count} days",
-  "@days": {"placeholders": {"count": {"type": "int"}}},
+  "@days": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "interest": "Interest",
   "itemTotal": "Total",
   "totalBorrowed": "Total borrowed",
@@ -26,7 +34,13 @@
   "amountToPay": "Amount to pay",
   "paddyNeeded": "Paddy needed to clear this debt",
   "quintals": "{value} quintals",
-  "@quintals": {"placeholders": {"value": {"type": "String"}}},
+  "@quintals": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "errAmount": "Amount must be more than 0",
   "errBoughtDate": "Choose the bought-on date",
   "errPaybackDate": "Choose the paying-back date",
@@ -42,5 +56,214 @@
   "itemDap": "DAP",
   "itemPotash": "Potash",
   "itemPesticide": "Pesticide",
-  "itemSeeds": "Seeds"
+  "itemSeeds": "Seeds",
+  "navToday": "Today",
+  "navCredit": "Credit",
+  "priceCardTitle": "Paddy price",
+  "perQuintal": "per quintal",
+  "priceMinMax": "Min {min} · Max {max}",
+  "@priceMinMax": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "priceUp": "Up {amount}",
+  "@priceUp": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "priceDown": "Down {amount}",
+  "@priceDown": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "priceSame": "No change",
+  "priceComparedTo": "compared to {date}",
+  "@priceComparedTo": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "priceOfDate": "Price of {date}",
+  "@priceOfDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "marketName": "{market} market",
+  "@marketName": {
+    "placeholders": {
+      "market": {
+        "type": "String"
+      }
+    }
+  },
+  "otherVarieties": "Other varieties",
+  "mspTitle": "MSP {season}",
+  "@mspTitle": {
+    "placeholders": {
+      "season": {
+        "type": "String"
+      }
+    }
+  },
+  "mspCommon": "Common",
+  "mspGradeA": "Grade A",
+  "noPriceData": "No price for this variety yet",
+  "damCardTitle": "Dam water level",
+  "damNarayanpur": "Narayanpur (Basavasagar)",
+  "damAlmatti": "Almatti",
+  "damFull": "full",
+  "damLevel": "Water level",
+  "damFullLevel": "Full level",
+  "damStorage": "Storage",
+  "damInflow": "Inflow",
+  "damOutflow": "Outflow",
+  "metres": "{value} m",
+  "@metres": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "tmc": "{value} TMC",
+  "@tmc": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "cusecs": "{value} cusecs",
+  "@cusecs": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "noDamData": "No dam data yet",
+  "damManual": "Entered by hand",
+  "dataDate": "Data of {date}",
+  "@dataDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "rainCardTitle": "Rain forecast",
+  "rainNow": "Now",
+  "rainRestOfToday": "Rest of today",
+  "rainChance": "{value}% chance of rain",
+  "@rainChance": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "millimetres": "{value} mm",
+  "@millimetres": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "rainNone": "No rain expected today",
+  "rainSmall": "Small chance of rain today",
+  "rainLikely": "Rain likely after {time}",
+  "@rainLikely": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "rainHeavy": "Heavy rain likely after {time}",
+  "@rainHeavy": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "rainLikelyToday": "Rain likely today",
+  "rainHeavyToday": "Heavy rain likely today",
+  "hourMorning": "{h} AM",
+  "@hourMorning": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "hourNoon": "{h} PM",
+  "@hourNoon": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "hourEvening": "{h} PM",
+  "@hourEvening": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "hourNightPm": "{h} PM",
+  "@hourNightPm": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "hourNightAm": "{h} AM",
+  "@hourNightAm": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "nextDays": "Next days",
+  "updatedAt": "Updated {time}",
+  "@updatedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "staleData": "Old data – no new update yet",
+  "noDataYet": "No data yet. Turn on the internet and pull down to refresh.",
+  "refreshFailed": "Could not connect. Showing saved data.",
+  "refreshNoChange": "Nothing new yet",
+  "refreshUpdated": "Updated",
+  "myVariety": "My paddy variety",
+  "myMarket": "My market",
+  "varietySonaMasuri": "Sona Masuri",
+  "varietyRnr": "RNR",
+  "varietyBpt": "BPT"
 }

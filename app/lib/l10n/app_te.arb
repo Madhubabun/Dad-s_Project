@@ -17,7 +17,13 @@
   "removed": "తీసివేశాం",
   "undo": "వెనక్కి",
   "days": "{count} రోజులు",
-  "@days": {"placeholders": {"count": {"type": "int"}}},
+  "@days": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "interest": "వడ్డీ",
   "itemTotal": "మొత్తం",
   "totalBorrowed": "తీసుకున్న అప్పు",
@@ -25,7 +31,13 @@
   "amountToPay": "కట్టాల్సిన మొత్తం",
   "paddyNeeded": "ఈ అప్పు తీర్చడానికి కావాల్సిన వడ్లు",
   "quintals": "{value} క్వింటాళ్లు",
-  "@quintals": {"placeholders": {"value": {"type": "String"}}},
+  "@quintals": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "errAmount": "ధర 0 కంటే ఎక్కువ ఉండాలి",
   "errBoughtDate": "కొన్న తేదీ ఎంచుకోండి",
   "errPaybackDate": "తిరిగి కట్టే తేదీ ఎంచుకోండి",
@@ -41,5 +53,214 @@
   "itemDap": "డీఏపీ",
   "itemPotash": "పొటాష్",
   "itemPesticide": "పురుగు మందు",
-  "itemSeeds": "విత్తనాలు"
+  "itemSeeds": "విత్తనాలు",
+  "navToday": "ఈరోజు",
+  "navCredit": "అప్పు లెక్క",
+  "priceCardTitle": "వడ్ల ధర",
+  "perQuintal": "క్వింటాల్‌కు",
+  "priceMinMax": "కనిష్ఠ {min} · గరిష్ఠ {max}",
+  "@priceMinMax": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "priceUp": "{amount} పెరిగింది",
+  "@priceUp": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "priceDown": "{amount} తగ్గింది",
+  "@priceDown": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "priceSame": "మార్పు లేదు",
+  "priceComparedTo": "{date} తో పోలిస్తే",
+  "@priceComparedTo": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "priceOfDate": "{date} నాటి ధర",
+  "@priceOfDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "marketName": "{market} మార్కెట్",
+  "@marketName": {
+    "placeholders": {
+      "market": {
+        "type": "String"
+      }
+    }
+  },
+  "otherVarieties": "ఇతర రకాలు",
+  "mspTitle": "కనీస మద్దతు ధర {season}",
+  "@mspTitle": {
+    "placeholders": {
+      "season": {
+        "type": "String"
+      }
+    }
+  },
+  "mspCommon": "సాధారణం",
+  "mspGradeA": "గ్రేడ్ A",
+  "noPriceData": "ఈ రకానికి ఇంకా ధర రాలేదు",
+  "damCardTitle": "ఆనకట్ట నీటి మట్టం",
+  "damNarayanpur": "నారాయణపుర (బసవసాగర్)",
+  "damAlmatti": "ఆలమట్టి",
+  "damFull": "నిండింది",
+  "damLevel": "నీటి మట్టం",
+  "damFullLevel": "పూర్తి మట్టం",
+  "damStorage": "నిల్వ",
+  "damInflow": "లోపలికి వస్తున్న నీరు",
+  "damOutflow": "బయటికి వదిలే నీరు",
+  "metres": "{value} మీ.",
+  "@metres": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "tmc": "{value} TMC",
+  "@tmc": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "cusecs": "{value} క్యూసెక్కులు",
+  "@cusecs": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "noDamData": "ఇంకా ఆనకట్ట సమాచారం రాలేదు",
+  "damManual": "చేతితో నమోదు చేసినది",
+  "dataDate": "{date} నాటి సమాచారం",
+  "@dataDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "rainCardTitle": "వర్ష సూచన",
+  "rainNow": "ఇప్పుడు",
+  "rainRestOfToday": "ఈరోజు మిగతా సమయం",
+  "rainChance": "వర్షం అవకాశం {value}%",
+  "@rainChance": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "millimetres": "{value} మి.మీ.",
+  "@millimetres": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "rainNone": "ఈరోజు వర్షం పడే అవకాశం లేదు",
+  "rainSmall": "ఈరోజు కొద్దిగా వర్షం పడవచ్చు",
+  "rainLikely": "{time} తర్వాత వర్షం పడే అవకాశం ఉంది",
+  "@rainLikely": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "rainHeavy": "{time} తర్వాత భారీ వర్షం పడే అవకాశం ఉంది",
+  "@rainHeavy": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "rainLikelyToday": "ఈరోజు వర్షం పడే అవకాశం ఉంది",
+  "rainHeavyToday": "ఈరోజు భారీ వర్షం పడే అవకాశం ఉంది",
+  "hourMorning": "ఉదయం {h}",
+  "@hourMorning": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "hourNoon": "మధ్యాహ్నం {h}",
+  "@hourNoon": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "hourEvening": "సాయంత్రం {h}",
+  "@hourEvening": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "hourNightPm": "రాత్రి {h}",
+  "@hourNightPm": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "hourNightAm": "రాత్రి {h}",
+  "@hourNightAm": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "nextDays": "రాబోయే రోజులు",
+  "updatedAt": "{time} కి తాజా సమాచారం",
+  "@updatedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "staleData": "పాత సమాచారం – కొత్తది ఇంకా రాలేదు",
+  "noDataYet": "ఇంకా సమాచారం రాలేదు. ఇంటర్నెట్ ఆన్ చేసి, పై నుండి కిందికి లాగండి.",
+  "refreshFailed": "ఇంటర్నెట్ అందలేదు. దాచిన సమాచారం చూపిస్తున్నాం.",
+  "refreshNoChange": "కొత్త సమాచారం లేదు",
+  "refreshUpdated": "కొత్త సమాచారం వచ్చింది",
+  "myVariety": "నా వడ్ల రకం",
+  "myMarket": "నా మార్కెట్",
+  "varietySonaMasuri": "సోనా మసూరి",
+  "varietyRnr": "ఆర్‌ఎన్‌ఆర్",
+  "varietyBpt": "బీపీటీ"
 }

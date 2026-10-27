@@ -1,0 +1,26 @@
+[
+ {
+  "day": "2026-10-27",
+  "status": 200,
+  "answer": "{\"result\":\"Success\",\"msg\":\"\",\"pdfurl\":\"/en/Root/DownloadFile?path=%5C%5C192.168.2.21%5Ce%24%5CKSNDMC%20REPORTS%5CDaily%20Reports%5CReservoir%20Level%5C2026%5CRL_27-10-2026.pdf\\u0026fileName=Reservoir%20Level%20and%20Capacity_27-10-2026.pdf\"}",
+  "pdfurl": "https://ksndmc.org/en/Root/DownloadFile?path=%5C%5C192.168.2.21%5Ce%24%5CKSNDMC%20REPORTS%5CDaily%20Reports%5CReservoir%20Level%5C2026%5CRL_27-10-2026.pdf&fileName=Reservoir%20Level%20and%20Capacity_27-10-2026.pdf"
+ },
+ {
+  "day": "2026-10-26",
+  "status": 200,
+  "answer": "{\"result\":\"Success\",\"msg\":\"\",\"pdfurl\":\"/en/Root/DownloadFile?path=%5C%5C192.168.2.21%5Ce%24%5CKSNDMC%20REPORTS%5CDaily%20Reports%5CReservoir%20Level%5C2026%5CRL_26-10-2026.pdf\\u0026fileName=Reservoir%20Level%20and%20Capacity_26-10-2026.pdf\"}",
+  "pdfurl": "https://ksndmc.org/en/Root/DownloadFile?path=%5C%5C192.168.2.21%5Ce%24%5CKSNDMC%20REPORTS%5CDaily%20Reports%5CReservoir%20Level%5C2026%5CRL_26-10-2026.pdf&fileName=Reservoir%20Level%20and%20Capacity_26-10-2026.pdf"
+ },
+ {
+  "day": "2026-10-25",
+  "status": 200,
+  "answer": "{\"result\":\"Success\",\"msg\":\"\",\"pdfurl\":\"/en/Root/DownloadFile?path=%5C%5C192.168.2.21%5Ce%24%5CKSNDMC%20REPORTS%5CDaily%20Reports%5CReservoir%20Level%5C2026%5CRL_25-10-2026.pdf\\u0026fileName=Reservoir%20Level%20and%20Capacity_25-10-2026.pdf\"}",
+  "pdfurl": "https://ksndmc.org/en/Root/DownloadFile?path=%5C%5C192.168.2.21%5Ce%24%5CKSNDMC%20REPORTS%5CDaily%20Reports%5CReservoir%20Level%5C2026%5CRL_25-10-2026.pdf&fileName=Reservoir%20Level%20and%20Capacity_25-10-2026.pdf"
+ },
+ {
+  "day": "2026-10-24",
+  "status": 200,
+  "answer": "{\"result\":\"Success\",\"msg\":\"\",\"pdfurl\":\"/en/Root/DownloadFile?path=%5C%5C192.168.2.21%5Ce%24%5CKSNDMC%20REPORTS%5CDaily%20Reports%5CReservoir%20Level%5C2026%5CRL_24-10-2026.pdf\\u0026fileName=Reservoir%20Level%20and%20Capacity_24-10-2026.pdf\"}",
+  "pdfurl": "https://ksndmc.org/en/Root/DownloadFile?path=%5C%5C192.168.2.21%5Ce%24%5CKSNDMC%20REPORTS%5CDaily%20Reports%5CReservoir%20Level%5C2026%5CRL_24-10-2026.pdf&fileName=Reservoir%20Level%20and%20Capacity_24-10-2026.pdf"
+ }
+]

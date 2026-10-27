@@ -133,4 +133,224 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get itemSeeds => 'Seeds';
+
+  @override
+  String get navToday => 'Today';
+
+  @override
+  String get navCredit => 'Credit';
+
+  @override
+  String get priceCardTitle => 'Paddy price';
+
+  @override
+  String get perQuintal => 'per quintal';
+
+  @override
+  String priceMinMax(String min, String max) {
+    return 'Min $min · Max $max';
+  }
+
+  @override
+  String priceUp(String amount) {
+    return 'Up $amount';
+  }
+
+  @override
+  String priceDown(String amount) {
+    return 'Down $amount';
+  }
+
+  @override
+  String get priceSame => 'No change';
+
+  @override
+  String priceComparedTo(String date) {
+    return 'compared to $date';
+  }
+
+  @override
+  String priceOfDate(String date) {
+    return 'Price of $date';
+  }
+
+  @override
+  String marketName(String market) {
+    return '$market market';
+  }
+
+  @override
+  String get otherVarieties => 'Other varieties';
+
+  @override
+  String mspTitle(String season) {
+    return 'MSP $season';
+  }
+
+  @override
+  String get mspCommon => 'Common';
+
+  @override
+  String get mspGradeA => 'Grade A';
+
+  @override
+  String get noPriceData => 'No price for this variety yet';
+
+  @override
+  String get damCardTitle => 'Dam water level';
+
+  @override
+  String get damNarayanpur => 'Narayanpur (Basavasagar)';
+
+  @override
+  String get damAlmatti => 'Almatti';
+
+  @override
+  String get damFull => 'full';
+
+  @override
+  String get damLevel => 'Water level';
+
+  @override
+  String get damFullLevel => 'Full level';
+
+  @override
+  String get damStorage => 'Storage';
+
+  @override
+  String get damInflow => 'Inflow';
+
+  @override
+  String get damOutflow => 'Outflow';
+
+  @override
+  String metres(String value) {
+    return '$value m';
+  }
+
+  @override
+  String tmc(String value) {
+    return '$value TMC';
+  }
+
+  @override
+  String cusecs(String value) {
+    return '$value cusecs';
+  }
+
+  @override
+  String get noDamData => 'No dam data yet';
+
+  @override
+  String get damManual => 'Entered by hand';
+
+  @override
+  String dataDate(String date) {
+    return 'Data of $date';
+  }
+
+  @override
+  String get rainCardTitle => 'Rain forecast';
+
+  @override
+  String get rainNow => 'Now';
+
+  @override
+  String get rainRestOfToday => 'Rest of today';
+
+  @override
+  String rainChance(int value) {
+    return '$value% chance of rain';
+  }
+
+  @override
+  String millimetres(String value) {
+    return '$value mm';
+  }
+
+  @override
+  String get rainNone => 'No rain expected today';
+
+  @override
+  String get rainSmall => 'Small chance of rain today';
+
+  @override
+  String rainLikely(String time) {
+    return 'Rain likely after $time';
+  }
+
+  @override
+  String rainHeavy(String time) {
+    return 'Heavy rain likely after $time';
+  }
+
+  @override
+  String get rainLikelyToday => 'Rain likely today';
+
+  @override
+  String get rainHeavyToday => 'Heavy rain likely today';
+
+  @override
+  String hourMorning(int h) {
+    return '$h AM';
+  }
+
+  @override
+  String hourNoon(int h) {
+    return '$h PM';
+  }
+
+  @override
+  String hourEvening(int h) {
+    return '$h PM';
+  }
+
+  @override
+  String hourNightPm(int h) {
+    return '$h PM';
+  }
+
+  @override
+  String hourNightAm(int h) {
+    return '$h AM';
+  }
+
+  @override
+  String get nextDays => 'Next days';
+
+  @override
+  String updatedAt(String time) {
+    return 'Updated $time';
+  }
+
+  @override
+  String get staleData => 'Old data – no new update yet';
+
+  @override
+  String get noDataYet =>
+      'No data yet. Turn on the internet and pull down to refresh.';
+
+  @override
+  String get refreshFailed => 'Could not connect. Showing saved data.';
+
+  @override
+  String get refreshNoChange => 'Nothing new yet';
+
+  @override
+  String get refreshUpdated => 'Updated';
+
+  @override
+  String get myVariety => 'My paddy variety';
+
+  @override
+  String get myMarket => 'My market';
+
+  @override
+  String get varietySonaMasuri => 'Sona Masuri';
+
+  @override
+  String get varietyRnr => 'RNR';
+
+  @override
+  String get varietyBpt => 'BPT';
 }

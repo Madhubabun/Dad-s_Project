@@ -7,12 +7,14 @@ name: Update data
 on:
   schedule:
     - cron: "17 * * * *" # weather: every hour at :17
+    - cron: "0 5 * * *" # dam: 10:30 AM IST
+    - cron: "30 11 * * *" # dam retry: 5:00 PM IST (KSNDMC often updates the report around 4:45 PM)
   workflow_dispatch:
     inputs:
       source:
         description: Which data to update
         type: choice
-        options: [weather]
+        options: [weather, dam]
         default: weather
 
 # The called workflow pushes to the data branch.
@@ -25,4 +27,11 @@ jobs:
     uses: ./.github/workflows/update-section.yml
     with:
       source: weather
+    secrets: inherit
+
+  dam:
+    if: github.event_name == 'schedule' && (github.event.schedule == '0 5 * * *' || github.event.schedule == '30 11 * * *') || inputs.source == 'dam'
+    uses: ./.github/workflows/update-section.yml
+    with:
+      source: dam
     secrets: inherit

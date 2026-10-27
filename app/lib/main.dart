@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app_state.dart';
-import 'calculator/calculator_screen.dart';
+import 'home_screen.dart';
 import 'l10n/app_localizations.dart';
 
 Future<void> main() async {
@@ -23,7 +23,7 @@ class RaitheRajuApp extends StatelessWidget {
       // Includes Flutter's own Telugu texts, e.g. for the date picker.
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       theme: buildTheme(),
-      home: const CalculatorScreen(),
+      home: const HomeScreen(),
     );
   }
 }
@@ -50,6 +50,9 @@ ThemeData buildTheme() {
       bodyLarge: t.bodyLarge?.copyWith(fontSize: 20),
       bodyMedium: t.bodyMedium?.copyWith(fontSize: 18),
       labelLarge: t.labelLarge?.copyWith(fontSize: 18),
+    ),
+    navigationBarTheme: const NavigationBarThemeData(
+      labelTextStyle: WidgetStatePropertyAll(TextStyle(fontSize: 18)),
     ),
     inputDecorationTheme: const InputDecorationTheme(
       border: OutlineInputBorder(),

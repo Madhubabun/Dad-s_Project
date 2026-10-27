@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app_state.dart';
 import '../calculator/interest.dart';
+import '../dashboard/dashboard_screen.dart' show varietyLabel;
 import '../l10n/app_localizations.dart';
 
 /// Language and how the shop counts days. Kept short on purpose.
@@ -13,6 +14,17 @@ class SettingsScreen extends StatelessWidget {
     final l = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final state = AppStateScope.of(context);
+    final prices = state.dashboard?.prices;
+    // Varieties the market reports, plus the three Dad grows, in one list.
+    final varieties = {
+      AppState.defaultVariety,
+      'RNR',
+      'BPT',
+      ...?prices?.allVarieties,
+      state.variety,
+    }.toList();
+    final markets =
+        prices?.markets.map((m) => m.name).toList() ?? const <String>[];
 
     return Scaffold(
       appBar: AppBar(title: Text(l.settingsTitle)),
@@ -34,6 +46,41 @@ class SettingsScreen extends StatelessWidget {
               ],
             ),
           ),
+          const Divider(height: 32),
+          Text(l.myVariety, style: theme.textTheme.titleLarge),
+          RadioGroup<String>(
+            groupValue: state.variety,
+            onChanged: (v) {
+              if (v != null) state.setVariety(v);
+            },
+            child: Column(
+              children: [
+                for (final v in varieties)
+                  RadioListTile<String>(
+                    value: v,
+                    title: Text(varietyLabel(l, v)),
+                  ),
+              ],
+            ),
+          ),
+          // Markets come from the downloaded data, so this appears once
+          // the first prices have arrived.
+          if (markets.length > 1) ...[
+            const Divider(height: 32),
+            Text(l.myMarket, style: theme.textTheme.titleLarge),
+            RadioGroup<String>(
+              groupValue: state.market ?? markets.first,
+              onChanged: (m) {
+                if (m != null) state.setMarket(m);
+              },
+              child: Column(
+                children: [
+                  for (final m in markets)
+                    RadioListTile<String>(value: m, title: Text(m)),
+                ],
+              ),
+            ),
+          ],
           const Divider(height: 32),
           Text(l.dayCountMethod, style: theme.textTheme.titleLarge),
           RadioGroup<DayCount>(

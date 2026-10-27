@@ -20,7 +20,9 @@ class RainDrops extends StatelessWidget {
           Icon(
             i < filled ? Icons.water_drop : Icons.water_drop_outlined,
             size: size,
-            color: i < filled ? const Color(0xFF1E88E5) : const Color(0xFF90A4AE),
+            color: i < filled
+                ? const Color(0xFF1E88E5)
+                : const Color(0xFF90A4AE),
           ),
       ],
     );
@@ -39,7 +41,8 @@ class FallingRain extends StatefulWidget {
   State<FallingRain> createState() => _FallingRainState();
 }
 
-class _FallingRainState extends State<FallingRain> with SingleTickerProviderStateMixin {
+class _FallingRainState extends State<FallingRain>
+    with SingleTickerProviderStateMixin {
   late final AnimationController _c = AnimationController(
     vsync: this,
     duration: const Duration(seconds: 2),
@@ -77,7 +80,8 @@ class _FallingRainState extends State<FallingRain> with SingleTickerProviderStat
         Positioned.fill(
           child: AnimatedBuilder(
             animation: _c,
-            builder: (context, _) => CustomPaint(painter: _RainPainter(_c.value)),
+            builder: (context, _) =>
+                CustomPaint(painter: _RainPainter(_c.value)),
           ),
         ),
         widget.child,
@@ -102,7 +106,8 @@ class _RainPainter extends CustomPainter {
     for (var i = 0; i < 14; i++) {
       final x = random.nextDouble() * size.width;
       final speed = 0.6 + random.nextDouble() * 0.8;
-      final y = ((random.nextDouble() + t * speed) % 1.0) * (size.height + 30) - 15;
+      final y =
+          ((random.nextDouble() + t * speed) % 1.0) * (size.height + 30) - 15;
       canvas.drawLine(Offset(x, y), Offset(x - 3, y + 14), paint);
     }
   }

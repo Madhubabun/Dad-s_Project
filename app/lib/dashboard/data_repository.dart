@@ -9,7 +9,8 @@ import 'dashboard_data.dart';
 /// The only internet address the app ever calls: one small file made by
 /// our GitHub backend. The phone never calls the price, dam or weather
 /// websites itself.
-const dataUrl = 'https://raw.githubusercontent.com/Madhubabun/Dad-s_Project/data/data.json';
+const dataUrl =
+    'https://raw.githubusercontent.com/Madhubabun/Dad-s_Project/data/data.json';
 
 enum SyncResult { updated, notChanged, failed }
 
@@ -41,7 +42,10 @@ class DataRepository {
     try {
       final etag = _prefs.getString(_etagKey);
       final response = await http
-          .get(Uri.parse(dataUrl), headers: {if (etag != null) 'If-None-Match': etag})
+          .get(
+            Uri.parse(dataUrl),
+            headers: {if (etag != null) 'If-None-Match': etag},
+          )
           .timeout(const Duration(seconds: 20));
       if (response.statusCode == 304) return SyncResult.notChanged;
       if (response.statusCode != 200) return SyncResult.failed;

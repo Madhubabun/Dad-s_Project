@@ -337,6 +337,360 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Seeds'**
   String get itemSeeds;
+
+  /// No description provided for @navToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get navToday;
+
+  /// No description provided for @navCredit.
+  ///
+  /// In en, this message translates to:
+  /// **'Credit'**
+  String get navCredit;
+
+  /// No description provided for @priceCardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Paddy price'**
+  String get priceCardTitle;
+
+  /// No description provided for @perQuintal.
+  ///
+  /// In en, this message translates to:
+  /// **'per quintal'**
+  String get perQuintal;
+
+  /// No description provided for @priceMinMax.
+  ///
+  /// In en, this message translates to:
+  /// **'Min {min} · Max {max}'**
+  String priceMinMax(String min, String max);
+
+  /// No description provided for @priceUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Up {amount}'**
+  String priceUp(String amount);
+
+  /// No description provided for @priceDown.
+  ///
+  /// In en, this message translates to:
+  /// **'Down {amount}'**
+  String priceDown(String amount);
+
+  /// No description provided for @priceSame.
+  ///
+  /// In en, this message translates to:
+  /// **'No change'**
+  String get priceSame;
+
+  /// No description provided for @priceComparedTo.
+  ///
+  /// In en, this message translates to:
+  /// **'compared to {date}'**
+  String priceComparedTo(String date);
+
+  /// No description provided for @priceOfDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Price of {date}'**
+  String priceOfDate(String date);
+
+  /// No description provided for @marketName.
+  ///
+  /// In en, this message translates to:
+  /// **'{market} market'**
+  String marketName(String market);
+
+  /// No description provided for @otherVarieties.
+  ///
+  /// In en, this message translates to:
+  /// **'Other varieties'**
+  String get otherVarieties;
+
+  /// No description provided for @mspTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'MSP {season}'**
+  String mspTitle(String season);
+
+  /// No description provided for @mspCommon.
+  ///
+  /// In en, this message translates to:
+  /// **'Common'**
+  String get mspCommon;
+
+  /// No description provided for @mspGradeA.
+  ///
+  /// In en, this message translates to:
+  /// **'Grade A'**
+  String get mspGradeA;
+
+  /// No description provided for @noPriceData.
+  ///
+  /// In en, this message translates to:
+  /// **'No price for this variety yet'**
+  String get noPriceData;
+
+  /// No description provided for @damCardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Dam water level'**
+  String get damCardTitle;
+
+  /// No description provided for @damNarayanpur.
+  ///
+  /// In en, this message translates to:
+  /// **'Narayanpur (Basavasagar)'**
+  String get damNarayanpur;
+
+  /// No description provided for @damAlmatti.
+  ///
+  /// In en, this message translates to:
+  /// **'Almatti'**
+  String get damAlmatti;
+
+  /// No description provided for @damFull.
+  ///
+  /// In en, this message translates to:
+  /// **'full'**
+  String get damFull;
+
+  /// No description provided for @damLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Water level'**
+  String get damLevel;
+
+  /// No description provided for @damFullLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Full level'**
+  String get damFullLevel;
+
+  /// No description provided for @damStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'Storage'**
+  String get damStorage;
+
+  /// No description provided for @damInflow.
+  ///
+  /// In en, this message translates to:
+  /// **'Inflow'**
+  String get damInflow;
+
+  /// No description provided for @damOutflow.
+  ///
+  /// In en, this message translates to:
+  /// **'Outflow'**
+  String get damOutflow;
+
+  /// No description provided for @metres.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} m'**
+  String metres(String value);
+
+  /// No description provided for @tmc.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} TMC'**
+  String tmc(String value);
+
+  /// No description provided for @cusecs.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} cusecs'**
+  String cusecs(String value);
+
+  /// No description provided for @noDamData.
+  ///
+  /// In en, this message translates to:
+  /// **'No dam data yet'**
+  String get noDamData;
+
+  /// No description provided for @damManual.
+  ///
+  /// In en, this message translates to:
+  /// **'Entered by hand'**
+  String get damManual;
+
+  /// No description provided for @dataDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Data of {date}'**
+  String dataDate(String date);
+
+  /// No description provided for @rainCardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rain forecast'**
+  String get rainCardTitle;
+
+  /// No description provided for @rainNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Now'**
+  String get rainNow;
+
+  /// No description provided for @rainRestOfToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Rest of today'**
+  String get rainRestOfToday;
+
+  /// No description provided for @rainChance.
+  ///
+  /// In en, this message translates to:
+  /// **'{value}% chance of rain'**
+  String rainChance(int value);
+
+  /// No description provided for @millimetres.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} mm'**
+  String millimetres(String value);
+
+  /// No description provided for @rainNone.
+  ///
+  /// In en, this message translates to:
+  /// **'No rain expected today'**
+  String get rainNone;
+
+  /// No description provided for @rainSmall.
+  ///
+  /// In en, this message translates to:
+  /// **'Small chance of rain today'**
+  String get rainSmall;
+
+  /// No description provided for @rainLikely.
+  ///
+  /// In en, this message translates to:
+  /// **'Rain likely after {time}'**
+  String rainLikely(String time);
+
+  /// No description provided for @rainHeavy.
+  ///
+  /// In en, this message translates to:
+  /// **'Heavy rain likely after {time}'**
+  String rainHeavy(String time);
+
+  /// No description provided for @rainLikelyToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Rain likely today'**
+  String get rainLikelyToday;
+
+  /// No description provided for @rainHeavyToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Heavy rain likely today'**
+  String get rainHeavyToday;
+
+  /// No description provided for @hourMorning.
+  ///
+  /// In en, this message translates to:
+  /// **'{h} AM'**
+  String hourMorning(int h);
+
+  /// No description provided for @hourNoon.
+  ///
+  /// In en, this message translates to:
+  /// **'{h} PM'**
+  String hourNoon(int h);
+
+  /// No description provided for @hourEvening.
+  ///
+  /// In en, this message translates to:
+  /// **'{h} PM'**
+  String hourEvening(int h);
+
+  /// No description provided for @hourNightPm.
+  ///
+  /// In en, this message translates to:
+  /// **'{h} PM'**
+  String hourNightPm(int h);
+
+  /// No description provided for @hourNightAm.
+  ///
+  /// In en, this message translates to:
+  /// **'{h} AM'**
+  String hourNightAm(int h);
+
+  /// No description provided for @nextDays.
+  ///
+  /// In en, this message translates to:
+  /// **'Next days'**
+  String get nextDays;
+
+  /// No description provided for @updatedAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Updated {time}'**
+  String updatedAt(String time);
+
+  /// No description provided for @staleData.
+  ///
+  /// In en, this message translates to:
+  /// **'Old data – no new update yet'**
+  String get staleData;
+
+  /// No description provided for @noDataYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No data yet. Turn on the internet and pull down to refresh.'**
+  String get noDataYet;
+
+  /// No description provided for @refreshFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not connect. Showing saved data.'**
+  String get refreshFailed;
+
+  /// No description provided for @refreshNoChange.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing new yet'**
+  String get refreshNoChange;
+
+  /// No description provided for @refreshUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Updated'**
+  String get refreshUpdated;
+
+  /// No description provided for @myVariety.
+  ///
+  /// In en, this message translates to:
+  /// **'My paddy variety'**
+  String get myVariety;
+
+  /// No description provided for @myMarket.
+  ///
+  /// In en, this message translates to:
+  /// **'My market'**
+  String get myMarket;
+
+  /// No description provided for @varietySonaMasuri.
+  ///
+  /// In en, this message translates to:
+  /// **'Sona Masuri'**
+  String get varietySonaMasuri;
+
+  /// No description provided for @varietyRnr.
+  ///
+  /// In en, this message translates to:
+  /// **'RNR'**
+  String get varietyRnr;
+
+  /// No description provided for @varietyBpt.
+  ///
+  /// In en, this message translates to:
+  /// **'BPT'**
+  String get varietyBpt;
 }
 
 class _AppLocalizationsDelegate

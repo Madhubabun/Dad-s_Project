@@ -78,7 +78,11 @@ class _WaterTankState extends State<WaterTank> with TickerProviderStateMixin {
 }
 
 class _TankPainter extends CustomPainter {
-  _TankPainter({required this.level, required this.phase, required this.border});
+  _TankPainter({
+    required this.level,
+    required this.phase,
+    required this.border,
+  });
 
   final double level; // 0..1
   final double phase;
@@ -87,7 +91,10 @@ class _TankPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final rect = Offset.zero & size;
-    final tank = RRect.fromRectAndRadius(rect.deflate(2), const Radius.circular(18));
+    final tank = RRect.fromRectAndRadius(
+      rect.deflate(2),
+      const Radius.circular(18),
+    );
     canvas.save();
     canvas.clipRRect(tank);
     canvas.drawRect(rect, Paint()..color = const Color(0xFFE3F2FD));
@@ -100,7 +107,9 @@ class _TankPainter extends CustomPainter {
     ]) {
       final path = Path()..moveTo(0, size.height);
       for (double x = 0; x <= size.width; x += 2) {
-        final y = waterTop + math.sin(x / size.width * 2 * math.pi + phase + offset) * 5;
+        final y =
+            waterTop +
+            math.sin(x / size.width * 2 * math.pi + phase + offset) * 5;
         path.lineTo(x, y);
       }
       path

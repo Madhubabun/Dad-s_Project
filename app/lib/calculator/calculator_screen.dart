@@ -111,10 +111,11 @@ class _SummaryCard extends StatelessWidget {
       );
     }
 
-    // No dashboard yet (Phase 2), so there is no paddy price and the
-    // "paddy needed" line stays hidden.
-    const double? latestPaddyPrice = null;
-    final quintals = CreditSheet.paddyNeeded(s.amountToPay, latestPaddyPrice);
+    // Hidden until a price for Dad's variety has been downloaded.
+    final quintals = CreditSheet.paddyNeeded(
+      s.amountToPay,
+      AppStateScope.of(context).myPaddyPrice,
+    );
 
     return Card(
       color: theme.colorScheme.primaryContainer,

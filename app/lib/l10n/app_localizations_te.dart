@@ -132,4 +132,224 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get itemSeeds => 'విత్తనాలు';
+
+  @override
+  String get navToday => 'ఈరోజు';
+
+  @override
+  String get navCredit => 'అప్పు లెక్క';
+
+  @override
+  String get priceCardTitle => 'వడ్ల ధర';
+
+  @override
+  String get perQuintal => 'క్వింటాల్‌కు';
+
+  @override
+  String priceMinMax(String min, String max) {
+    return 'కనిష్ఠ $min · గరిష్ఠ $max';
+  }
+
+  @override
+  String priceUp(String amount) {
+    return '$amount పెరిగింది';
+  }
+
+  @override
+  String priceDown(String amount) {
+    return '$amount తగ్గింది';
+  }
+
+  @override
+  String get priceSame => 'మార్పు లేదు';
+
+  @override
+  String priceComparedTo(String date) {
+    return '$date తో పోలిస్తే';
+  }
+
+  @override
+  String priceOfDate(String date) {
+    return '$date నాటి ధర';
+  }
+
+  @override
+  String marketName(String market) {
+    return '$market మార్కెట్';
+  }
+
+  @override
+  String get otherVarieties => 'ఇతర రకాలు';
+
+  @override
+  String mspTitle(String season) {
+    return 'కనీస మద్దతు ధర $season';
+  }
+
+  @override
+  String get mspCommon => 'సాధారణం';
+
+  @override
+  String get mspGradeA => 'గ్రేడ్ A';
+
+  @override
+  String get noPriceData => 'ఈ రకానికి ఇంకా ధర రాలేదు';
+
+  @override
+  String get damCardTitle => 'ఆనకట్ట నీటి మట్టం';
+
+  @override
+  String get damNarayanpur => 'నారాయణపుర (బసవసాగర్)';
+
+  @override
+  String get damAlmatti => 'ఆలమట్టి';
+
+  @override
+  String get damFull => 'నిండింది';
+
+  @override
+  String get damLevel => 'నీటి మట్టం';
+
+  @override
+  String get damFullLevel => 'పూర్తి మట్టం';
+
+  @override
+  String get damStorage => 'నిల్వ';
+
+  @override
+  String get damInflow => 'లోపలికి వస్తున్న నీరు';
+
+  @override
+  String get damOutflow => 'బయటికి వదిలే నీరు';
+
+  @override
+  String metres(String value) {
+    return '$value మీ.';
+  }
+
+  @override
+  String tmc(String value) {
+    return '$value TMC';
+  }
+
+  @override
+  String cusecs(String value) {
+    return '$value క్యూసెక్కులు';
+  }
+
+  @override
+  String get noDamData => 'ఇంకా ఆనకట్ట సమాచారం రాలేదు';
+
+  @override
+  String get damManual => 'చేతితో నమోదు చేసినది';
+
+  @override
+  String dataDate(String date) {
+    return '$date నాటి సమాచారం';
+  }
+
+  @override
+  String get rainCardTitle => 'వర్ష సూచన';
+
+  @override
+  String get rainNow => 'ఇప్పుడు';
+
+  @override
+  String get rainRestOfToday => 'ఈరోజు మిగతా సమయం';
+
+  @override
+  String rainChance(int value) {
+    return 'వర్షం అవకాశం $value%';
+  }
+
+  @override
+  String millimetres(String value) {
+    return '$value మి.మీ.';
+  }
+
+  @override
+  String get rainNone => 'ఈరోజు వర్షం పడే అవకాశం లేదు';
+
+  @override
+  String get rainSmall => 'ఈరోజు కొద్దిగా వర్షం పడవచ్చు';
+
+  @override
+  String rainLikely(String time) {
+    return '$time తర్వాత వర్షం పడే అవకాశం ఉంది';
+  }
+
+  @override
+  String rainHeavy(String time) {
+    return '$time తర్వాత భారీ వర్షం పడే అవకాశం ఉంది';
+  }
+
+  @override
+  String get rainLikelyToday => 'ఈరోజు వర్షం పడే అవకాశం ఉంది';
+
+  @override
+  String get rainHeavyToday => 'ఈరోజు భారీ వర్షం పడే అవకాశం ఉంది';
+
+  @override
+  String hourMorning(int h) {
+    return 'ఉదయం $h';
+  }
+
+  @override
+  String hourNoon(int h) {
+    return 'మధ్యాహ్నం $h';
+  }
+
+  @override
+  String hourEvening(int h) {
+    return 'సాయంత్రం $h';
+  }
+
+  @override
+  String hourNightPm(int h) {
+    return 'రాత్రి $h';
+  }
+
+  @override
+  String hourNightAm(int h) {
+    return 'రాత్రి $h';
+  }
+
+  @override
+  String get nextDays => 'రాబోయే రోజులు';
+
+  @override
+  String updatedAt(String time) {
+    return '$time కి తాజా సమాచారం';
+  }
+
+  @override
+  String get staleData => 'పాత సమాచారం – కొత్తది ఇంకా రాలేదు';
+
+  @override
+  String get noDataYet =>
+      'ఇంకా సమాచారం రాలేదు. ఇంటర్నెట్ ఆన్ చేసి, పై నుండి కిందికి లాగండి.';
+
+  @override
+  String get refreshFailed => 'ఇంటర్నెట్ అందలేదు. దాచిన సమాచారం చూపిస్తున్నాం.';
+
+  @override
+  String get refreshNoChange => 'కొత్త సమాచారం లేదు';
+
+  @override
+  String get refreshUpdated => 'కొత్త సమాచారం వచ్చింది';
+
+  @override
+  String get myVariety => 'నా వడ్ల రకం';
+
+  @override
+  String get myMarket => 'నా మార్కెట్';
+
+  @override
+  String get varietySonaMasuri => 'సోనా మసూరి';
+
+  @override
+  String get varietyRnr => 'ఆర్‌ఎన్‌ఆర్';
+
+  @override
+  String get varietyBpt => 'బీపీటీ';
 }

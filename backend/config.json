@@ -11,5 +11,35 @@
     "likely_chance": 60,
     "small_chance": 30,
     "heavy_mm": 15
+  },
+  "dam": {
+    "_comment": "Dams shown in the app, in this order. 'match' is a pattern for the name in the KSNDMC report.",
+    "dams": [
+      {
+        "id": "narayanpur",
+        "match": "narayan"
+      },
+      {
+        "id": "almatti",
+        "match": "ala?matti"
+      }
+    ],
+    "manual": {
+      "_comment": "If KSNDMC scraping is broken for a long time, set enabled to true and type the values from the KSNDMC report. The app then shows them as 'Entered by hand'.",
+      "enabled": false,
+      "date": "2026-10-27",
+      "dams": [
+        {
+          "id": "narayanpur",
+          "level_m": 488.74,
+          "full_level_m": 492.25,
+          "storage_tmc": 19.73,
+          "full_storage_tmc": 33.31,
+          "percent": 59,
+          "inflow_cusecs": 107,
+          "outflow_cusecs": 1629
+        }
+      ]
+    }
   }
 }

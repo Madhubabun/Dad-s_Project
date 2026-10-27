@@ -1,0 +1,7 @@
+# Settings for Flutter's translation system.
+# app_en.arb is the template. Every text in it must also be in app_te.arb
+# (Telugu is the default language in the app).
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+nullable-getter: false

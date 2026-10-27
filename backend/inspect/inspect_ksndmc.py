@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (RaitheRaju data check)"}
-START_PAGES = ["https://www.ksndmc.org/", "https://ksndmc.org/"]
+START_PAGES = ["https://ksndmc.org/"]
 KEYWORDS = re.compile(r"reservoir|dam|storage|jalashaya|water level|daily report", re.I)
 DAM_WORDS = re.compile(r"narayan|basava|almatti", re.I)
 
@@ -30,6 +30,15 @@ def describe(r):
         text = " ".join(a.get_text().split())
         if KEYWORDS.search(text) or KEYWORDS.search(a["href"]):
             links.append((text, requests.compat.urljoin(r.url, a["href"])))
+    print("ALL links on page:")
+    for a in soup.find_all("a", href=True):
+        print(f"  {' '.join(a.get_text().split())!r} -> {a['href']}")
+    for tag in soup.find_all(["iframe", "frame", "form"]):
+        print("  ", tag.name, tag.get("src") or tag.get("action"))
+    print("scripts:", [s.get("src") for s in soup.find_all("script") if s.get("src")])
+    text = " ".join(soup.get_text().split())
+    for m in re.finditer(r"reservoir|jalashaya", text, re.I):
+        print("  near 'reservoir':", text[max(0, m.start() - 150): m.end() + 150])
     print("interesting links:")
     for text, href in links:
         print(f"  {text!r} -> {href}")

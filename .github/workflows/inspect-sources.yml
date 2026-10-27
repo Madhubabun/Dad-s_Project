@@ -11,6 +11,9 @@ on:
       - "backend/inspect/**"
       - ".github/workflows/inspect-sources.yml"
 
+permissions:
+  contents: write
+
 jobs:
   weather:
     runs-on: ubuntu-latest
@@ -39,4 +42,10 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -r backend/requirements.txt
-      - run: python backend/inspect/inspect_ksndmc.py
+      - name: Save raw KSNDMC pages and push them to the inspect-output branch
+        run: |
+          python backend/inspect/save_pages.py $(cat backend/inspect/pages.txt)
+          cd inspect-output
+          git init -q -b inspect-output && git add -A
+          git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "Raw pages"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" inspect-output

@@ -1,0 +1,23 @@
+# GitHub switches off scheduled workflows in a repository with no commits
+# for 60 days. This makes one tiny commit on the 1st of every month so the
+# data updates never stop.
+name: Keep schedules alive
+
+on:
+  schedule:
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > backend/heartbeat.txt
+          git -c user.name="raithe-raju-bot" -c user.email="actions@users.noreply.github.com" \
+            commit -am "Monthly heartbeat (keeps scheduled workflows on)"
+          git push

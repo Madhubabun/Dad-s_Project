@@ -1,0 +1,66 @@
+# Reusable steps: fetch one data source and publish it on the `data` branch.
+# Called by update-data.yml. The phone downloads
+#   https://raw.githubusercontent.com/Madhubabun/Dad-s_Project/data/data.json
+name: Update one data section
+
+on:
+  workflow_call:
+    inputs:
+      source:
+        description: "weather, prices or dam"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    # Only one update at a time, so two sources never overwrite each other.
+    concurrency:
+      group: data-branch
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - run: pip install -r backend/requirements.txt
+
+      - name: Get the current data
+        env:
+          REPO_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
+        run: |
+          if git ls-remote --exit-code --heads origin data >/dev/null; then
+            git clone --quiet --depth 1 --branch data "$REPO_URL" site
+          else
+            mkdir site
+          fi
+
+      - name: Fetch ${{ inputs.source }}
+        id: fetch
+        continue-on-error: true # still publish the "stale" mark below
+        env:
+          DATA_GOV_IN_API_KEY: ${{ secrets.DATA_GOV_IN_API_KEY }}
+        run: python backend/${{ inputs.source }}.py
+
+      # The data branch always holds a single commit, so it never grows.
+      - name: Publish
+        env:
+          REPO_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
+        run: |
+          cd site
+          rm -rf .git
+          git init --quiet -b data
+          git add -A
+          git -c user.name="raithe-raju-bot" -c user.email="actions@users.noreply.github.com" \
+            commit --quiet -m "Update ${{ inputs.source }}"
+          git push --quiet --force "$REPO_URL" data
+
+      - name: Report a failed fetch
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "::error::${{ inputs.source }} could not be fetched. The app shows the last good data, marked as old."
+          exit 1

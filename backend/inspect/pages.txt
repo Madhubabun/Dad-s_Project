@@ -1,0 +1,7 @@
+https://ksndmc.org/en/QueryInterface
+https://ksndmc.org/en/Reports/Daily
+https://ksndmc.org/en/Graphs
+https://ksndmc.org/en/Maps
+https://ksndmc.org:804/
+https://www.ksndmc.org:8087/
+https://ksndmc.org/Content/js/script.js

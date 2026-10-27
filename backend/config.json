@@ -1,0 +1,15 @@
+{
+  "_comment": "Settings for the backend scripts. Edit on GitHub; the next scheduled run uses the new values.",
+  "location": {
+    "name": "Masarakal",
+    "latitude": 16.3694,
+    "longitude": 77.0172,
+    "timezone": "Asia/Kolkata"
+  },
+  "weather": {
+    "_comment": "Thresholds for the one-line summary. rain chance in %, rain in mm.",
+    "likely_chance": 60,
+    "small_chance": 30,
+    "heavy_mm": 15
+  }
+}

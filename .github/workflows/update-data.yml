@@ -15,6 +15,10 @@ on:
         options: [weather]
         default: weather
 
+# The called workflow pushes to the data branch.
+permissions:
+  contents: write
+
 jobs:
   weather:
     if: github.event_name == 'schedule' && github.event.schedule == '17 * * * *' || inputs.source == 'weather'

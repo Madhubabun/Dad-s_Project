@@ -1,0 +1,44 @@
+{
+ "now": {
+  "rain_chance": 1,
+  "rain_mm": 0,
+  "code": 2
+ },
+ "today": {
+  "rain_chance": 4,
+  "rain_mm": 0,
+  "wind_max_kmh": 15
+ },
+ "summary": {
+  "kind": "none",
+  "from_hour": null
+ },
+ "days": [
+  {
+   "date": "2026-11-08",
+   "rain_chance": 3,
+   "rain_mm": 0,
+   "code": 3
+  },
+  {
+   "date": "2026-11-09",
+   "rain_chance": 0,
+   "rain_mm": 0,
+   "code": 0
+  },
+  {
+   "date": "2026-11-10",
+   "rain_chance": 0,
+   "rain_mm": 0,
+   "code": 0
+  },
+  {
+   "date": "2026-11-11",
+   "rain_chance": 0,
+   "rain_mm": 0,
+   "code": 0
+  }
+ ],
+ "status": "ok",
+ "last_updated": "2026-11-07T21:56:29+05:30"
+}

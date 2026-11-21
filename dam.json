@@ -1,0 +1,33 @@
+{
+ "source": "ksndmc",
+ "dams": [
+  {
+   "id": "narayanpur",
+   "date": "2026-11-21",
+   "full_level_m": 492.25,
+   "level_m": 489.09,
+   "last_year_level_m": 491.59,
+   "full_storage_tmc": 33.31,
+   "storage_tmc": 20.89,
+   "last_year_storage_tmc": 30.44,
+   "percent": 63.0,
+   "inflow_cusecs": 549.0,
+   "outflow_cusecs": 549.0
+  },
+  {
+   "id": "almatti",
+   "date": "2026-11-21",
+   "full_level_m": 519.6,
+   "level_m": 513.77,
+   "last_year_level_m": 519.53,
+   "full_storage_tmc": 123.08,
+   "storage_tmc": 53.17,
+   "last_year_storage_tmc": 122.31,
+   "percent": 43.0,
+   "inflow_cusecs": 150.0,
+   "outflow_cusecs": 150.0
+  }
+ ],
+ "status": "ok",
+ "last_updated": "2026-11-21T18:50:30+05:30"
+}
